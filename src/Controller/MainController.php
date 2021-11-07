@@ -11,12 +11,15 @@ class MainController extends AbstractController
 {
     public function index(): Response
     {
-     return new Response('<h1>Welcome to the Main Controller</h1>');
+     return $this->render('home/index.html.twig');
     }
 
     public function custom(Request $request): Response
     {
        $name = $request->get('name');
-        return new Response("<h1>Welcome $name,to the Custom Page</h1>");
+
+       return $this->render('home/custom.html.twig',[
+           'name' => $name
+       ]);
     }
 }
