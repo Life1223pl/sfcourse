@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <a href="{{ path('posts') }}">Go back!</a>
+    <h1>Post Title: {{ post.title }}</h1>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <td>ID</td>
+            <td>Title</td>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ post.id }}</td>
+                <td>{{ post.title }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+{% endblock %}

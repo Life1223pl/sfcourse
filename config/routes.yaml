@@ -4,3 +4,16 @@ main:
 custom:
     path: /custom/{name?}
     controller: App\Controller\MainController::custom
+create:
+    path: /post/create
+    controller: App\Controller\PostController::create
+posts:
+    path: /post/posts
+    controller: App\Controller\PostController::index
+show:
+    path: /post/show/{id}
+    controller: App\Controller\PostController::show
+remove:
+    path: /post/remove/{id}
+    controller: App\Controller\PostController::remove
+
